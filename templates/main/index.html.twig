@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success" role="alert">{{ message }}</div>
+    {% endfor %}
+{% if app.user %}
+    <h1>hi  {{ app.user}} ! comment vas tu?  </h1>
+
+{% else %}
+merci de vous connecter sur <b><a href="http://localhost:8000/register">houniii</a></b>
+{% endif %}
+
+
+{% endblock %}
